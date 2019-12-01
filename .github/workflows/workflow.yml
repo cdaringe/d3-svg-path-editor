@@ -1,0 +1,43 @@
+name: main
+on: [push]
+jobs:
+  run:
+    name: run
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@master
+    - name: setup-node
+      uses: actions/setup-node@master
+      with:
+        version: 12.x
+    - name: install
+      uses: ianwalter/puppeteer@v2.0.0
+      with:
+        args: yarn
+    - name: format check
+      run: yarn format --check
+    - name: lint
+      run: yarn lint
+    - name: build
+      run: yarn build
+    - name: test
+      uses: ianwalter/puppeteer@v2.0.0
+      with:
+        args: yarn test
+    - name: npm test
+      run: npm test
+    - name: commitlint
+      uses: wagoid/commitlint-github-action@v1.2.2
+    - name: release
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: |
+        if [[ "$GITHUB_REF" = "refs/heads/master" ]]; then
+          GITHUB_TOKEN=$GH_TOKEN npx semantic-release --verbose
+        else
+          echo "skipping release on branch $GITHUB_REF"
+        fi

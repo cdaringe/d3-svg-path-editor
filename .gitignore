@@ -1,0 +1,13 @@
+node_modules
+.cache
+dist
+test.bundle.js
+*.log
+bundle.test.js
+dist
+demo/**/*.js
+demo/**/*.jsx
+src/**/*.js
+src/**/*.jsx
+test/**/*.js
+test/**/*.jsx
