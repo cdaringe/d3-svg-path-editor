@@ -2,6 +2,7 @@
   "name": "d3-svg-path-editor",
   "version": "0.0.0-semantic-release",
   "license": "MIT",
+  "files": ["src"],
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
@@ -36,6 +37,7 @@
     "clean": "del '{src,demo,test}/**/*.{js,jsx,d.ts}'",
     "format": "prettier-standard '{demo,src,test,scripts}/**/*.{js,jsx,ts,tsx}'",
     "lint": "standardx '{demo,src,test,scripts}/**/*.{js,jsx,ts,tsx}' --fix",
+    "build:demo": "parcel build demo/index.html",
     "demo": "parcel demo/index.html",
     "test": "testem ci"
   },
