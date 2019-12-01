@@ -1036,4 +1036,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"react":"n8MK","react-dom":"NKHc"}],"EWEi":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("./demo.css");var e=require("./util/handle-key-events"),t=require("../src/mod"),n=require("./util/on-state-change"),i=require("d3"),o=[[10,80],[100,100],[200,30],[300,50],[400,40],[500,80]],s=300,r=600,d=i.select(document.getElementById("demo")).attr("width",r).attr("height",s),a=t.fromPoints({onStateChange:function(){return E()},points:o,svg$:d}),u=a.path$,c=a.nodes,l=a.undo,g=a.disableEditing,h=a.enableEditing,p=a.setNodeVisibility,b=a.snapper,f=!0,E=function e(){n.onStateChange({nodes:c,onShowNodes:function(){p(f=!f)},onDisableEditing:function(){g(),e()},onEnableEditing:function(){h(),e()},snapperState:b.state})};E(),e.bindKeyEvents({onUndo:l});
 },{"./demo.css":"n4SH","./util/handle-key-events":"bGHY","../src/mod":"qfts","./util/on-state-change":"Ox0Q","d3":"UzF0"}]},{},["EWEi"], null)
-//# sourceMappingURL=/demo.aa9466e4.js.map
+//# sourceMappingURL=demo.aa9466e4.js.map

@@ -1,2 +1,2 @@
 body{font-family:Ubuntu Mono,Arial,Helvetica,sans-serif;background:linear-gradient(#a9a9a9,grey);height:100vh}#demo{box-shadow:0 0 3px -1px #000;display:block;margin:1em auto}#controls{display:block;max-width:600px;margin:auto}#state{position:fixed;right:10px;top:10px;z-index:-1}#state ul{list-style:none;padding-left:0}path{fill:none;stroke:#000;stroke-width:1.5px}line{fill:none;stroke:red;stroke-width:1.5px}circle{fill:red}circle:hover{fill:#8b0000}.snapper{fill:#00f}rect{fill:none;cursor:crosshair;pointer-events:all}
-/*# sourceMappingURL=/demo.2be5b01c.css.map */
+/*# sourceMappingURL=demo.2be5b01c.css.map */
