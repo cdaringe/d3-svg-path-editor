@@ -35,9 +35,11 @@ const {
   setNodeVisibility, // call to show/hide nodes
   snapper // new node creator (snapper) instance
 } = fromPoints({
-  onStateChange: nodes => { ... },
+  // # required
   points,
   svg$,
+  // # optional
+  // onStateChange: nodes => { ... },
   // testCanEditNode: node => boolean // control node edit-ability
   // transformLine: d3Line => d3Line // e.g. line => line.curve(d3.curveCatmullRom.alpha(0.9))
 })
