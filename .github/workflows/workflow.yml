@@ -23,8 +23,6 @@ jobs:
       run: yarn build -p tsconfig.prod.json
     - name: test
       run: yarn test
-    - name: npm test
-      run: npm test
     - name: commitlint
       uses: wagoid/commitlint-github-action@v1.2.2
     - name: release
