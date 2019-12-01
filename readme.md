@@ -5,7 +5,6 @@ create an editable svg [path](https://developer.mozilla.org/en-US/docs/Web/SVG/E
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![TypeScript package](https://img.shields.io/badge/typings-included-blue.svg)](https://www.typescriptlang.org)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## install
 
@@ -23,14 +22,14 @@ const points: [number, number][] = [[0, 0], [10, 10]]
 const svg$ = d3.select((document.getElementById('my_svg')) as SVGSVGElement)
 const {
   path$, // d3 path selection
-  nodes, // abstract point datas
+  nodes, // abstract point datas. mutable
   undo, // undo last edits
   disableEditing, // call to disable editing
   enableEditing, // call to enable editing
   setNodeVisibility, // call to show/hide nodes
   snapper // new node creator (snapper) instance
 } = fromPoints({
-  onStateChange: () => renderUi(),
+  onStateChange: nodes => { ... },
   points,
   svg$
 })
