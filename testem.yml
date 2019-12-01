@@ -1,0 +1,10 @@
+before_tests: yarn bundle:test
+disable_watching: true
+framework: tap
+serve_files:
+  - bundle.test.js
+tap_quiet_logs: false
+launch_in_dev:
+  - Chrome
+launch_in_ci:
+  - Chrome
