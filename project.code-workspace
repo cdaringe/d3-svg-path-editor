@@ -11,7 +11,8 @@
 			"**/.hg": true,
 			"**/CVS": true,
 			"**/.DS_Store": true,
-			"**/*.js": true
+			"**/*.js": true,
+			"**/*.jsx": true
 		},
 		"typescript.tsdk": "node_modules/typescript/lib"
 	}

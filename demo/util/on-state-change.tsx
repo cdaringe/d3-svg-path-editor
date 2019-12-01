@@ -8,6 +8,7 @@ let isPaintingState = false
 export type OnStateChange = {
   onDisableEditing: () => void
   onEnableEditing: () => void
+  onToggleLineMode: () => void
   onShowNodes: () => void
   nodes: MetaNode[]
   snapperState: SnapperState
@@ -26,6 +27,7 @@ export const render = ({
   onDisableEditing,
   onEnableEditing,
   onShowNodes,
+  onToggleLineMode,
   snapperState
 }: OnStateChange) => {
   const toFourChars = (num: number) => {
@@ -38,7 +40,7 @@ export const render = ({
       <button onClick={onShowNodes}>toggle node visibility</button>
       <button onClick={onDisableEditing}>disable editing</button>
       <button onClick={onEnableEditing}>enable editing</button>
-
+      <button onClick={onToggleLineMode}>toggle line mode</button>
       <p>press cmd+z or ctrl+z to use the undo feature</p>
       {/*  */}
       <div id='state'>

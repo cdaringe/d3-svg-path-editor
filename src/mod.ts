@@ -1,4 +1,4 @@
-import { circle, path } from './dom'
+import { circle, path, LineTransform } from './dom'
 import { createNodeDragger } from './dragger'
 import { createNodeSnapper } from './snapper'
 import { D3Path, Point, MetaNode, D3SVG } from './interfaces'
@@ -18,6 +18,7 @@ export function renderNodes (opts: {
   path$: D3Path
   render: () => void
   svg$: D3SVG
+  transformLine?: LineTransform
 }) {
   const {
     svg$,
@@ -25,7 +26,8 @@ export function renderNodes (opts: {
     nodes,
     render: rerender,
     onAddHistory,
-    getNodeEditTest
+    getNodeEditTest,
+    transformLine
   } = opts
   nodes.forEach(function renderNode (mp, i) {
     const {
@@ -67,7 +69,8 @@ export function renderNodes (opts: {
   })
   path.renderLine(
     path$,
-    nodes.map(node => node.point)
+    nodes.map(node => node.point),
+    transformLine
   )
 }
 
@@ -81,6 +84,7 @@ export type FromPoints = {
   points: Point[]
   svg$: D3SVG
   testCanEditNode?: TestCanEditNode
+  transformLine?: LineTransform
 }
 export const fromPoints = (opts: FromPoints) => {
   const {
@@ -88,7 +92,8 @@ export const fromPoints = (opts: FromPoints) => {
     onStateChange = () => {},
     points,
     svg$,
-    testCanEditNode: userTestCanEditNode
+    testCanEditNode: userTestCanEditNode,
+    transformLine
   } = opts
   let internalCanEditNode: undefined | TestCanEditNode
   let nodes = toMetaNodes(points)
@@ -154,7 +159,8 @@ export const fromPoints = (opts: FromPoints) => {
         path$,
         render,
         svg$,
-        getNodeEditTest: () => userTestCanEditNode || internalCanEditNode
+        getNodeEditTest: () => userTestCanEditNode || internalCanEditNode,
+        transformLine
       })
     )
   render()
@@ -167,6 +173,7 @@ export const fromPoints = (opts: FromPoints) => {
     path$,
     setNodeVisibility,
     snapper,
-    undo: onUndo
+    undo: onUndo,
+    render
   }
 }

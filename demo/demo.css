@@ -1,6 +1,6 @@
 body {
   font-family: 'Ubuntu Mono', Arial, Helvetica, sans-serif;
-  background: linear-gradient(darkgray, gray);
+  background: linear-gradient(#3f51b56b, #00bcd494);
   height: 100vh;
 }
 
@@ -13,6 +13,9 @@ body {
   display: block;
   max-width: 600px;
   margin: auto;
+}
+#controls button {
+  display: block;
 }
 #state {
   position: fixed;

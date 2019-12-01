@@ -1,4 +1,4 @@
-import { D3Circle, D3Path, Point } from './interfaces'
+import { D3Circle, D3Path, Point, D3Selection, D3Line } from './interfaces'
 import d3 = require('d3')
 
 export type AppendCircleOptions = {
@@ -22,7 +22,16 @@ export const circle = {
       .attr('r', r || 10)
 }
 
+export type LineTransform = (line: D3Line, points: Point[]) => D3Line
+
 export const path = {
-  renderLine: (path$: D3Path, points: Point[]) =>
-    path$.attr('d', d3.line().curve(d3.curveCatmullRom.alpha(0.5))(points)!)
+  renderLine: (
+    path$: D3Path,
+    points: Point[],
+    withLineTransform?: LineTransform
+  ) => {
+    let line = d3.line()
+    if (withLineTransform) line = withLineTransform(line, points)
+    return path$.attr('d', line(points)!)
+  }
 }

@@ -30,16 +30,21 @@ const {
   disableEditing,
   enableEditing,
   setNodeVisibility,
-  snapper
+  snapper,
+  render
 } = fromPoints({
   onStateChange: () => renderUi(),
   points,
-  svg$
+  svg$,
+  transformLine: line => {
+    return isCurvedLineMode ? line.curve(d3.curveCatmullRom.alpha(0.9)) : line
+  }
 })
 
 // ^ focus on ^
 // below is for setting up the demo controls and outputs :)
 let isNodesVisibile = true
+let isCurvedLineMode = true
 const renderUi = () => {
   onStateChange({
     nodes,
@@ -54,6 +59,10 @@ const renderUi = () => {
     onEnableEditing: () => {
       enableEditing()
       renderUi()
+    },
+    onToggleLineMode: () => {
+      isCurvedLineMode = !isCurvedLineMode
+      render()
     },
     snapperState: snapper.state
   })
