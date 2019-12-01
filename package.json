@@ -2,7 +2,9 @@
   "name": "d3-svg-path-editor",
   "version": "0.0.0-semantic-release",
   "license": "MIT",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
@@ -16,6 +18,7 @@
     "blue-tape": "1.0.0",
     "d3": "5.14.1",
     "del-cli": "3.0.0",
+    "gh-pages": "^2.1.1",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
     "parcel-bundler": "1.12.4",
@@ -37,7 +40,7 @@
     "clean": "del '{src,demo,test}/**/*.{js,jsx,d.ts}'",
     "format": "prettier-standard '{demo,src,test,scripts}/**/*.{js,jsx,ts,tsx}'",
     "lint": "standardx '{demo,src,test,scripts}/**/*.{js,jsx,ts,tsx}' --fix",
-    "build:demo": "parcel build demo/index.html",
+    "build:demo": "parcel build demo/index.html --public-url ./",
     "demo": "parcel demo/index.html",
     "test": "testem ci"
   },
