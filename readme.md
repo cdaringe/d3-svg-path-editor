@@ -11,6 +11,8 @@ create an editable svg [path](https://developer.mozilla.org/en-US/docs/Web/SVG/E
   <img src='./img/demo.mov.gif' />
 </div>
 
+see the [live, interactive demo](https://cdaringe.github.io/d3-svg-path-editor/)
+
 ## install
 
 `npm install --save d3-svg-path-editor d3`
