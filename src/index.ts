@@ -10,7 +10,7 @@ export const toPointRef = ([x, y]: Point) => `${x.toFixed(3)}_${y.toFixed(3)}`
 export const toMetaNodes: (points: Point[]) => MetaNode[] = points =>
   points.map(point => ({ point }))
 
-type TestCanEditNode = (node: MetaNode) => boolean
+type TestCanEditNode = (node?: MetaNode, i?: number) => boolean
 
 export function renderNodes (opts: {
   getNodeEditTest: () => TestCanEditNode | undefined
@@ -43,7 +43,10 @@ export function renderNodes (opts: {
         },
         onDrag: ({ x, y }) => {
           const canEdit = getNodeEditTest()
-          if (canEdit && !canEdit(mp)) return
+          if (canEdit) {
+            const ithNode = nodes.findIndex(node => node === mp)
+            if (!canEdit(mp, ithNode)) return
+          }
           mp.isDirty = true
           mp.point = [x, y]
           rerender()
@@ -84,6 +87,7 @@ export type FromPoints = {
   onStateChange?: (nodes: MetaNode[]) => void
   points: Point[]
   svg$: D3SVG
+  path$?: D3Path
   testCanEditNode?: TestCanEditNode
   transformLine?: LineTransform
 }
@@ -91,6 +95,7 @@ export const fromPoints = (opts: FromPoints) => {
   const {
     historySize = 25,
     onStateChange = () => {},
+    path$: userPath$,
     points,
     svg$,
     testCanEditNode: userTestCanEditNode,
@@ -98,10 +103,12 @@ export const fromPoints = (opts: FromPoints) => {
   } = opts
   let internalCanEditNode: undefined | TestCanEditNode
   let nodes = toMetaNodes(points)
-  const path$ = svg$
-    .append('path')
-    .attr('stroke', 'black')
-    .attr('fill', 'none')
+  const path$ =
+    userPath$ ||
+    svg$
+      .append('path')
+      .attr('stroke', 'black')
+      .attr('fill', 'none')
 
   // bind node snapper
   const snapper = createNodeSnapper({
