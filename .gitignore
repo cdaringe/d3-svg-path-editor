@@ -11,3 +11,5 @@ src/**/*.js
 src/**/*.jsx
 test/**/*.js
 test/**/*.jsx
+**/*.map
+**/*d.ts
