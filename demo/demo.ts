@@ -1,6 +1,6 @@
 import './demo.css'
 import { bindKeyEvents } from './util/handle-key-events'
-import { fromPoints } from '../src/mod'
+import { fromPoints } from '../src/'
 import { onStateChange } from './util/on-state-change'
 import { Point } from '../src/interfaces'
 import d3 = require('d3')

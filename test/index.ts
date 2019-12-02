@@ -1,4 +1,4 @@
-import { fromPoints } from '../src/mod'
+import { fromPoints } from '../src'
 import { Point } from '../src/interfaces'
 import d3 = require('d3')
 import test = require('blue-tape')

@@ -3,6 +3,7 @@ import { createNodeDragger } from './dragger'
 import { createNodeSnapper } from './snapper'
 import { D3Path, Point, MetaNode, D3SVG } from './interfaces'
 import { getPointInsertionIndex } from './point-maths'
+export * from './interfaces'
 
 export const toPointRef = ([x, y]: Point) => `${x.toFixed(3)}_${y.toFixed(3)}`
 
