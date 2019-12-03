@@ -78,13 +78,15 @@ export function renderNodes (opts: {
   )
 }
 
+export type OnStateChange = (nodes: MetaNode[]) => void
+
 export type FromPoints = {
   /**
    * number of history entries to maintain for undo support
    * set to 0 to effectively disable
    */
   historySize?: number
-  onStateChange?: (nodes: MetaNode[]) => void
+  onStateChange?: OnStateChange
   points: Point[]
   svg$: D3SVG
   path$?: D3Path
