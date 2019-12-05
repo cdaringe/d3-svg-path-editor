@@ -3,6 +3,7 @@ import { createNodeDragger } from './dragger'
 import { createNodeSnapper } from './snapper'
 import { D3Path, Point, MetaNode, D3SVG } from './interfaces'
 import { getPointInsertionIndex } from './point-maths'
+import { onStateChange } from '../demo/util/on-state-change'
 export * from './interfaces'
 
 export const toPointRef = ([x, y]: Point) => `${x.toFixed(3)}_${y.toFixed(3)}`
@@ -16,6 +17,7 @@ export function renderNodes (opts: {
   getNodeEditTest: () => TestCanEditNode | undefined
   nodes: MetaNode[]
   onAddHistory: () => void
+  onStateChange: OnStateChange
   path$: D3Path
   render: () => void
   svg$: D3SVG
@@ -27,6 +29,7 @@ export function renderNodes (opts: {
     nodes,
     render: rerender,
     onAddHistory,
+    onStateChange,
     getNodeEditTest,
     transformLine
   } = opts
@@ -50,6 +53,7 @@ export function renderNodes (opts: {
           mp.isDirty = true
           mp.point = [x, y]
           rerender()
+          onStateChange(nodes)
         },
         onDragEnd: () => {
           const currentPoint = mp.point
@@ -166,6 +170,7 @@ export const fromPoints = (opts: FromPoints) => {
       renderNodes({
         nodes,
         onAddHistory,
+        onStateChange,
         path$,
         render,
         svg$,
