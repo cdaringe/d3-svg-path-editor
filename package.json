@@ -45,7 +45,7 @@
     "clean": "del '{src,demo,test}/**/*.{js,jsx,d.ts}' && rm -rf .cache",
     "format": "prettier-standard '{demo,src,test,scripts}/**/*.{js,jsx,ts,tsx}'",
     "lint": "standardx '{demo,src,test,scripts}/**/*.{js,jsx,ts,tsx}' --fix",
-    "build:demo": "parcel build demo/index.html --public-url ./",
+    "build:demo": "parcel build demo/index.html --public-url '.'",
     "demo": "parcel demo/index.html",
     "test": "testem ci"
   },
