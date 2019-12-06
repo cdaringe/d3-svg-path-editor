@@ -1,4 +1,4 @@
-# d3-svg-path-editor
+# @dino-dna/d3-svg-path-editor
 
 create an editable svg [path](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path). a library to enable in-app path editing
 
@@ -15,16 +15,16 @@ see the [live, interactive demo](https://cdaringe.github.io/d3-svg-path-editor/)
 
 ## install
 
-`npm install --save d3-svg-path-editor d3`
+`npm install --save @dino-dna/d3-svg-path-editor d3`
 
-on the topic of d3 and bundle performance, some minimal subset of d3 packages must be installed and added onto the `d3` instance. we use d3-line, d3-selection, and d3 events. `d3` experts are welcome to add documentation on how to
+on the topic of d3 and bundle performance, some minimal subset of d3 packages must be installed and added onto the `d3` instance. we use d3-line, d3-selection, and d3 events. `d3` experts are welcome to add documentation on how to optimize web builds here for d3 bundles!
 
 ## usage
 
 create a path from a set of points and d3 svg instance
 
 ```tsx
-import { fromPoints } from 'd3-svg-path-editor'
+import { fromPoints } from '@dino-dna/d3-svg-path-editor'
 const points: [number, number][] = [[0, 0], [10, 10]]
 const svg$ = d3.select((document.getElementById('my_svg')) as SVGSVGElement)
 const {
