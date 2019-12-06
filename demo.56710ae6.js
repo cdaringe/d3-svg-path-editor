@@ -29295,7 +29295,13 @@ function createMouseMoveHandler(_ref2) {
 }
 
 exports.createMouseMoveHandler = createMouseMoveHandler;
-},{"./dom":"../src/dom.ts","./point-maths":"../src/point-maths.ts","d3":"../node_modules/d3/index.js"}],"../src/mod.ts":[function(require,module,exports) {
+},{"./dom":"../src/dom.ts","./point-maths":"../src/point-maths.ts","d3":"../node_modules/d3/index.js"}],"../src/interfaces.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+},{}],"../src/index.ts":[function(require,module,exports) {
 "use strict";
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -29305,6 +29311,12 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function __export(m) {
+  for (var p in m) {
+    if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+  }
+}
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -29317,6 +29329,8 @@ var dragger_1 = require("./dragger");
 var snapper_1 = require("./snapper");
 
 var point_maths_1 = require("./point-maths");
+
+__export(require("./interfaces"));
 
 exports.toPointRef = function (_ref) {
   var _ref2 = _slicedToArray(_ref, 2),
@@ -29507,7 +29521,7 @@ exports.fromPoints = function (opts) {
     render: render
   };
 };
-},{"./dom":"../src/dom.ts","./dragger":"../src/dragger.ts","./snapper":"../src/snapper.ts","./point-maths":"../src/point-maths.ts"}],"../node_modules/object-assign/index.js":[function(require,module,exports) {
+},{"./dom":"../src/dom.ts","./dragger":"../src/dragger.ts","./snapper":"../src/snapper.ts","./point-maths":"../src/point-maths.ts","./interfaces":"../src/interfaces.ts"}],"../node_modules/object-assign/index.js":[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -61120,8 +61134,8 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"util/on-state-change.tsx":[function(require,module,exports) {
-"use strict";
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"util/on-state-change.js":[function(require,module,exports) {
+'use strict';
 
 var __importStar = this && this.__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
@@ -61129,23 +61143,23 @@ var __importStar = this && this.__importStar || function (mod) {
   if (mod != null) for (var k in mod) {
     if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
   }
-  result["default"] = mod;
+  result['default'] = mod;
   return result;
 };
 
 var __importDefault = this && this.__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
-    "default": mod
+    default: mod
   };
 };
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var React = __importStar(require("react"));
+var React = __importStar(require('react'));
 
-var react_dom_1 = __importDefault(require("react-dom"));
+var react_dom_1 = __importDefault(require('react-dom'));
 
 var isPaintingState = false;
 
@@ -61158,33 +61172,33 @@ exports.onStateChange = function (opts) {
   });
 };
 
-exports.render = function (_ref) {
-  var nodes = _ref.nodes,
-      onDisableEditing = _ref.onDisableEditing,
-      onEnableEditing = _ref.onEnableEditing,
-      onShowNodes = _ref.onShowNodes,
-      onToggleLineMode = _ref.onToggleLineMode,
-      snapperState = _ref.snapperState;
+exports.render = function (_a) {
+  var nodes = _a.nodes,
+      onDisableEditing = _a.onDisableEditing,
+      onEnableEditing = _a.onEnableEditing,
+      onShowNodes = _a.onShowNodes,
+      onToggleLineMode = _a.onToggleLineMode,
+      snapperState = _a.snapperState;
 
   var toFourChars = function toFourChars(num) {
     var rounded = Math.floor(num).toString();
     return rounded + ' '.repeat(4 - rounded.length);
   };
 
-  react_dom_1.default.render(React.createElement("div", null, React.createElement("h2", null, "controls"), React.createElement("button", {
+  react_dom_1.default.render(React.createElement('div', null, React.createElement('h2', null, 'controls'), React.createElement('button', {
     onClick: onShowNodes
-  }, "toggle node visibility"), React.createElement("button", {
+  }, 'toggle node visibility'), React.createElement('button', {
     onClick: onDisableEditing
-  }, "disable editing"), React.createElement("button", {
+  }, 'disable editing'), React.createElement('button', {
     onClick: onEnableEditing
-  }, "enable editing"), React.createElement("button", {
+  }, 'enable editing'), React.createElement('button', {
     onClick: onToggleLineMode
-  }, "toggle line mode"), React.createElement("p", null, "press cmd+z or ctrl+z to use the undo feature"), React.createElement("div", {
+  }, 'toggle line mode'), React.createElement('p', null, 'press cmd+z or ctrl+z to use the undo feature'), React.createElement('div', {
     id: 'state'
-  }, React.createElement("pre", null, JSON.stringify(snapperState, null, 2)), React.createElement("ul", null, nodes.map(function (node, i) {
-    return React.createElement("li", {
+  }, React.createElement('pre', null, JSON.stringify(snapperState, null, 2)), React.createElement('ul', null, nodes.map(function (node, i) {
+    return React.createElement('li', {
       key: i,
-      children: React.createElement("pre", {
+      children: React.createElement('pre', {
         children: node.point.map(toFourChars).join(', ')
       })
     });
@@ -61201,7 +61215,7 @@ require("./demo.css");
 
 var handle_key_events_1 = require("./util/handle-key-events");
 
-var mod_1 = require("../src/mod");
+var src_1 = require("../src/");
 
 var on_state_change_1 = require("./util/on-state-change");
 
@@ -61214,7 +61228,7 @@ var height = 300;
 var width = 600;
 var svg$ = d3.select(document.getElementById('demo')).attr('width', width).attr('height', height);
 
-var _mod_1$fromPoints = mod_1.fromPoints({
+var _src_1$fromPoints = src_1.fromPoints({
   onStateChange: function onStateChange() {
     return renderUi();
   },
@@ -61224,14 +61238,14 @@ var _mod_1$fromPoints = mod_1.fromPoints({
     return isCurvedLineMode ? line.curve(d3.curveCatmullRom.alpha(0.9)) : line;
   }
 }),
-    path$ = _mod_1$fromPoints.path$,
-    nodes = _mod_1$fromPoints.nodes,
-    onUndo = _mod_1$fromPoints.undo,
-    disableEditing = _mod_1$fromPoints.disableEditing,
-    enableEditing = _mod_1$fromPoints.enableEditing,
-    setNodeVisibility = _mod_1$fromPoints.setNodeVisibility,
-    snapper = _mod_1$fromPoints.snapper,
-    render = _mod_1$fromPoints.render; // ^ focus on ^
+    path$ = _src_1$fromPoints.path$,
+    nodes = _src_1$fromPoints.nodes,
+    onUndo = _src_1$fromPoints.undo,
+    disableEditing = _src_1$fromPoints.disableEditing,
+    enableEditing = _src_1$fromPoints.enableEditing,
+    setNodeVisibility = _src_1$fromPoints.setNodeVisibility,
+    snapper = _src_1$fromPoints.snapper,
+    render = _src_1$fromPoints.render; // ^ focus on ^
 // below is for setting up the demo controls and outputs :)
 
 
@@ -61265,7 +61279,7 @@ renderUi();
 handle_key_events_1.bindKeyEvents({
   onUndo: onUndo
 });
-},{"./demo.css":"demo.css","./util/handle-key-events":"util/handle-key-events.ts","../src/mod":"../src/mod.ts","./util/on-state-change":"util/on-state-change.tsx","d3":"../node_modules/d3/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./demo.css":"demo.css","./util/handle-key-events":"util/handle-key-events.ts","../src/":"../src/index.ts","./util/on-state-change":"util/on-state-change.js","d3":"../node_modules/d3/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -61293,7 +61307,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62139" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52754" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
