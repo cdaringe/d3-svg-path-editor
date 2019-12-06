@@ -1,5 +1,5 @@
 {
-  "name": "d3-svg-path-editor",
+  "name": "@dino-dna/d3-svg-path-editor",
   "version": "0.0.0-semantic-release",
   "license": "MIT",
   "main": "./src/index.js",
