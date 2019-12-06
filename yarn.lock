@@ -7436,7 +7436,7 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-perish@^1.0.2:
+perish@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/perish/-/perish-1.0.2.tgz#516eba8792bc76cdb381b69f3243d2213cc4cba3"
   integrity sha512-VWFRnVQTyKr/5THvVtwsyIAvXI0fZhhZwKK73MLfbxnsrs00yUDc+KQZ7EmX+DfAGhsysiORIkEGmp3BaOEEgw==
