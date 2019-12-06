@@ -25,6 +25,10 @@ jobs:
       run: yarn test
     - name: commitlint
       uses: wagoid/commitlint-github-action@v1.2.2
+    - name: setting git values
+      run: |
+        git config --local user.email "cdaringe@cdaringe.com"
+        git config --local user.name "cdaringe"
     - name: release
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -33,7 +37,7 @@ jobs:
         if [[ "$GITHUB_REF" = "refs/heads/master" ]]; then
           GITHUB_TOKEN=$GH_TOKEN npx semantic-release --verbose
           yarn build:demo
-          node scripts/gh-pages.js && echo published!
+          npx gh-pages -d dist
         else
           echo "skipping release on branch $GITHUB_REF"
         fi
