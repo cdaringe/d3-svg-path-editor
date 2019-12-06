@@ -3,6 +3,7 @@
   "version": "0.0.0-semantic-release",
   "license": "MIT",
   "main": "./src/index.js",
+  "private": false,
   "files": [
     "src"
   ],
