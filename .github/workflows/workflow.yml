@@ -37,7 +37,13 @@ jobs:
         if [[ "$GITHUB_REF" = "refs/heads/master" ]]; then
           GITHUB_TOKEN=$GH_TOKEN npx semantic-release --verbose
           yarn build:demo
-          npx gh-pages -d dist
         else
           echo "skipping release on branch $GITHUB_REF"
         fi
+    - name: gh-pages
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
+        BASE_BRANCH: master
+        BRANCH: gh-pages
+        FOLDER: build
