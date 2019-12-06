@@ -8,7 +8,7 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
     - name: setup-node
       uses: actions/setup-node@master
       with:
@@ -47,3 +47,4 @@ jobs:
         BASE_BRANCH: master
         BRANCH: gh-pages
         FOLDER: dist
+        CLEAN: true
