@@ -79,6 +79,7 @@ export function renderNodes (opts: {
     nodes.map(node => node.point),
     transformLine
   )
+  onStateChange(nodes)
 }
 
 export type OnStateChange = (nodes: MetaNode[]) => void
