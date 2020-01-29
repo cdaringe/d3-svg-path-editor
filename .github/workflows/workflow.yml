@@ -47,5 +47,6 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
         BASE_BRANCH: master
         BRANCH: gh-pages
-        FOLDER: dist
         CLEAN: true
+        FOLDER: dist
+        GITHUB_REF: ${{ env.GITHUB_REF }}
