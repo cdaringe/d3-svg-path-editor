@@ -42,6 +42,7 @@ jobs:
         fi
     - name: gh-pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
+      if: contains(env.GITHUB_REF, 'master')
       with:
         ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
         BASE_BRANCH: master
