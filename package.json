@@ -37,7 +37,7 @@
     "testem": "3.0.2",
     "typescript": "3.7.5",
     "webpack": "4.41.6",
-    "webpack-cli": "3.3.10"
+    "webpack-cli": "3.3.11"
   },
   "scripts": {
     "build": "tsc",
