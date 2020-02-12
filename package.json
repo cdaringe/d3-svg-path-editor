@@ -23,7 +23,7 @@
     "d3": "5.15.0",
     "del-cli": "3.0.0",
     "gh-pages": "2.2.0",
-    "husky": "4.2.1",
+    "husky": "4.2.2",
     "lint-staged": "10.0.7",
     "parcel-bundler": "1.12.4",
     "perish": "1.0.3",
