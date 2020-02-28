@@ -35,7 +35,7 @@
     "rollup-plugin-typescript": "1.0.1",
     "standardx": "5.0.0",
     "testem": "3.0.2",
-    "typescript": "3.8.2",
+    "typescript": "3.8.3",
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11"
   },
