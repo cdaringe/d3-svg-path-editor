@@ -31,7 +31,7 @@
     "prettier-standard": "16.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "rollup": "2.25.0",
+    "rollup": "2.26.0",
     "rollup-plugin-typescript": "1.0.1",
     "standardx": "5.0.0",
     "testem": "3.2.0",
