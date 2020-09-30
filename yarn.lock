@@ -1040,6 +1040,11 @@
   resolved "https://registry.yarnpkg.com/@types/d3-color/-/d3-color-1.2.2.tgz#80cf7cfff7401587b8f89307ba36fe4a576bc7cf"
   integrity sha512-6pBxzJ8ZP3dYEQ4YjQ+NVbQaOflfgXq/JbDiS99oLobM2o72uAST4q6yPxHv6FOTCRC/n35ktuo8pvw/S4M7sw==
 
+"@types/d3-color@^1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@types/d3-color/-/d3-color-1.4.1.tgz#0d9746c84dfef28807b2989eed4f37b2575e1f33"
+  integrity sha512-xkPLi+gbgUU9ED6QX4g6jqYL2KCB0/3AlM+ncMGqn49OgH0gFMY/ITGqPF8HwEiLzJaC+2L0I+gNwBgABv1Pvg==
+
 "@types/d3-contour@^1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@types/d3-contour/-/d3-contour-1.3.1.tgz#589dc3eec14168eea7e31edd1e3bbe246cc9d626"
@@ -1195,17 +1200,17 @@
     "@types/d3-interpolate" "*"
     "@types/d3-selection" "*"
 
-"@types/d3@5.9.4":
-  version "5.9.4"
-  resolved "https://registry.yarnpkg.com/@types/d3/-/d3-5.9.4.tgz#f0641119ea0e014dfde9e40f4131d1548faf83fc"
-  integrity sha512-GrXWcytAFVH25gWWAl+mKOPPaJk8x7J88rq7wjN0DhZvEMQI4CqBViGlNSUas5+l6a1M+cn2ZqjyCpJoKmuSWQ==
+"@types/d3@5.9.5":
+  version "5.9.5"
+  resolved "https://registry.yarnpkg.com/@types/d3/-/d3-5.9.5.tgz#9dd9efc424b8b7f2c957223128a1ed00b5f30c50"
+  integrity sha512-uTeuRXVlkIHcn+WeLXiSGDbE02VypoplBX73NNIT8vcX4GxjH5foZrKWBe4gNCvyzP1VQXEsw1QzZ7R4Yozu+g==
   dependencies:
     "@types/d3-array" "^1"
     "@types/d3-axis" "^1"
     "@types/d3-brush" "^1"
     "@types/d3-chord" "^1"
     "@types/d3-collection" "*"
-    "@types/d3-color" "*"
+    "@types/d3-color" "^1"
     "@types/d3-contour" "^1"
     "@types/d3-dispatch" "^1"
     "@types/d3-drag" "^1"
