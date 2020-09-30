@@ -14,7 +14,7 @@
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
     "@types/blue-tape": "0.1.33",
-    "@types/d3": "5.9.4",
+    "@types/d3": "5.9.5",
     "@types/lodash": "4.14.161",
     "@types/react-dom": "16.9.8",
     "@typescript-eslint/eslint-plugin": "3.10.1",
