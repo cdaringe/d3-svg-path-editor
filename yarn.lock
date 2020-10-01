@@ -1200,10 +1200,10 @@
     "@types/d3-interpolate" "*"
     "@types/d3-selection" "*"
 
-"@types/d3@5.9.5":
-  version "5.9.5"
-  resolved "https://registry.yarnpkg.com/@types/d3/-/d3-5.9.5.tgz#9dd9efc424b8b7f2c957223128a1ed00b5f30c50"
-  integrity sha512-uTeuRXVlkIHcn+WeLXiSGDbE02VypoplBX73NNIT8vcX4GxjH5foZrKWBe4gNCvyzP1VQXEsw1QzZ7R4Yozu+g==
+"@types/d3@5.16.0":
+  version "5.16.0"
+  resolved "https://registry.yarnpkg.com/@types/d3/-/d3-5.16.0.tgz#84f0674d8df58af04a91538d2bc9ecbb0543d3e9"
+  integrity sha512-BPe6m763fJet428zPK3/fLBzgGlh204kEEisUcZGsUqgQHh0V+fOHhuGV3pyJtT2QLe+E0y5oqxNYix32OgmHA==
   dependencies:
     "@types/d3-array" "^1"
     "@types/d3-axis" "^1"
