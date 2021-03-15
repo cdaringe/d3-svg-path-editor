@@ -33,7 +33,7 @@
     "react-dom": "17.0.1",
     "rollup": "2.41.2",
     "rollup-plugin-typescript": "1.0.1",
-    "standardx": "6.0.0",
+    "standardx": "7.0.0",
     "testem": "3.2.1",
     "typescript": "3.9.9",
     "webpack": "4.46.0",
