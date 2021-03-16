@@ -10437,10 +10437,10 @@ terser@^4.1.2, terser@^4.3.9:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-testem@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/testem/-/testem-3.2.1.tgz#32fb663d8760c144ce9262b6c4a519c732058468"
-  integrity sha512-D06hKPoFYhRBP1qov9egespMwwEEyQw44tmf5qm0IwWV3uswxqdJi+ZeRCk+aAdxmiwMXP7q8CYj/hNEt/PNlQ==
+testem@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/testem/-/testem-3.3.0.tgz#355f47339aa04302da05f631ec9f417d577c010c"
+  integrity sha512-PFfiqOVJKdkhMJoTd6wFH82q4GAX12pTA8uPGPAZHlgIobo6iHskv/IeJVPAhWzfRVNWmRWs1WhmnlS0/3IDtg==
   dependencies:
     backbone "^1.1.2"
     bluebird "^3.4.6"
