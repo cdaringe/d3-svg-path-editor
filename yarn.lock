@@ -8676,10 +8676,10 @@ prettierx@0.11.3:
     yaml "1.8.3"
     yaml-unist-parser "1.1.1"
 
-printf@^0.5.1:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/printf/-/printf-0.5.2.tgz#8546e01a1f647b1dff510ae92bdc92beb8c9b2f9"
-  integrity sha512-Hn0UuWqTRd94HiCJoiCNGZTnSyXJdIF3t4/4I293hezIzyH4pQ3ai4TlH/SmRCiMvR5aNMxSYWshjQWWW6J8MQ==
+printf@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/printf/-/printf-0.6.1.tgz#b9afa3d3b55b7f2e8b1715272479fc756ed88650"
+  integrity sha512-is0ctgGdPJ5951KulgfzvHGwJtZ5ck8l042vRkV6jrkpBzTmb/lueTqguWHy2JfVA+RY6gFVlaZgUS0j7S/dsw==
 
 private@^0.1.6:
   version "0.1.8"
@@ -10437,10 +10437,10 @@ terser@^4.1.2, terser@^4.3.9:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-testem@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/testem/-/testem-3.3.0.tgz#355f47339aa04302da05f631ec9f417d577c010c"
-  integrity sha512-PFfiqOVJKdkhMJoTd6wFH82q4GAX12pTA8uPGPAZHlgIobo6iHskv/IeJVPAhWzfRVNWmRWs1WhmnlS0/3IDtg==
+testem@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/testem/-/testem-3.4.0.tgz#48ab6b98e96085eeddac1fb46337872b13e9e06c"
+  integrity sha512-09mhy7fQj9o1W1c/Lfcs56FYqhFiZrXZjnOSJn+KxWAdYjbF5yHEuGrg+L5ooBlleCGD9r1TQwKd3+DixskT0Q==
   dependencies:
     backbone "^1.1.2"
     bluebird "^3.4.6"
@@ -10463,7 +10463,7 @@ testem@3.3.0:
     mustache "^3.0.0"
     node-notifier "^9.0.1"
     npmlog "^4.0.0"
-    printf "^0.5.1"
+    printf "^0.6.1"
     rimraf "^2.4.4"
     socket.io "^2.1.0"
     spawn-args "^0.2.0"
