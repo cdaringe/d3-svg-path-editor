@@ -24,7 +24,7 @@
     "del-cli": "4.0.1",
     "gh-pages": "3.2.3",
     "husky": "7.0.4",
-    "lint-staged": "12.0.1",
+    "lint-staged": "12.0.2",
     "parcel-bundler": "1.12.5",
     "perish": "1.0.3",
     "phantomjs-prebuilt": "2.1.16",
