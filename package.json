@@ -11,8 +11,8 @@
     "src"
   ],
   "devDependencies": {
-    "@commitlint/cli": "16.2.3",
-    "@commitlint/config-conventional": "16.2.1",
+    "@commitlint/cli": "16.2.4",
+    "@commitlint/config-conventional": "16.2.4",
     "@types/blue-tape": "0.1.33",
     "@types/d3": "5.16.4",
     "@types/lodash": "4.14.182",
