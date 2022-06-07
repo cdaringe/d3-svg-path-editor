@@ -10751,10 +10751,10 @@ terser@^4.1.2, terser@^4.3.9:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-testem@3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/testem/-/testem-3.7.0.tgz#9ea8dac471bf6f5f9e5f999feb9d68b9925cc61b"
-  integrity sha512-dJWbMiaR0gE1UHeVa0mMisc39Anx5xyyg6Jgxh0G96YD+XTQNrXrz4+m59HQ0dhjQsh091nghXhz7t6tJl3k1w==
+testem@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/testem/-/testem-3.8.0.tgz#651aeddbd433ef55ecf7262f0e58b89e1dccb9ac"
+  integrity sha512-WEaFOq2ZGqM3IQji+Q2uXHGdln5upKhSZ1pLYe9W4CttDELAo588frNovk8UQmB+Xg2mDI8G2zmm7qKuWsldtw==
   dependencies:
     "@xmldom/xmldom" "^0.8.0"
     backbone "^1.1.2"
