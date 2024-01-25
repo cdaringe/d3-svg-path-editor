@@ -1055,10 +1055,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@types/blue-tape@0.1.34":
-  version "0.1.34"
-  resolved "https://registry.yarnpkg.com/@types/blue-tape/-/blue-tape-0.1.34.tgz#9ff083ccc492e688a13ce1f83b72f9bc79802277"
-  integrity sha512-bLkb0WkhRCGKAuP8oMo/+zZsYVnbOSi+LwtMtLLL/+Kcj/MhXkbFGZWFmDjtfbywYLpfeatX9tNWaXZva/1QPQ==
+"@types/blue-tape@0.1.36":
+  version "0.1.36"
+  resolved "https://registry.yarnpkg.com/@types/blue-tape/-/blue-tape-0.1.36.tgz#12dcff339bef04846b9c6f3b8ebd4e52f9f7e23b"
+  integrity sha512-t2nyn0z6Q5PM/SA8suQEVfV1QsJ37XFlR7zEayviC/EdrqWq8JiKzE7BtwBcO28wFZ4bKQeD7MeJAj1B35KYAA==
   dependencies:
     "@types/node" "*"
     "@types/tape" "*"
